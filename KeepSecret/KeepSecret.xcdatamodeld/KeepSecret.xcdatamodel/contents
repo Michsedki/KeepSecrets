@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16A323" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Category" representedClassName=".Category" syncable="YES">
+        <attribute name="created" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="details" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="image" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="lastusedate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="toSecret" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Secret" inverseName="toCategory" inverseEntity="Secret" syncable="YES"/>
+    </entity>
+    <entity name="Picture" representedClassName=".Picture" syncable="YES">
+        <attribute name="created" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="image1" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="image2" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="isfavorit" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="lastusedate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Secret" representedClassName=".Secret" syncable="YES">
+        <attribute name="accountnumber" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="created" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="image1" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="image2" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="isfavorit" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="lastusedate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="nickname" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="password1" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="password2" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="phonenumber" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pinnumber" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="questionanswer" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="routingnumber" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="securityquestion" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="username" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="website" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="zipcode" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="toCategory" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Category" inverseName="toSecret" inverseEntity="Category" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Category" positionX="-63" positionY="-18" width="128" height="135"/>
+        <element name="Picture" positionX="63" positionY="135" width="128" height="135"/>
+        <element name="Secret" positionX="180" positionY="21" width="128" height="345"/>
+    </elements>
+</model>
